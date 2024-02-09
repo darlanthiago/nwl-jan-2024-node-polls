@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "ab02b2b6-3d52-4abc-88ed-d49f083a4d43",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8800138"
+	},
+	"item": [
+		{
+			"name": "poll",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Qual o melhor framework/lib front end??\",\n    \"options\": [\n        \"Angular\",\n        \"VueJS\",\n        \"ReactJS\",\n        \"Svelte\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/poll",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"poll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vote on poll",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pollOptionId\": \"dc2ea035-b398-4cf6-9cac-bc953dc4d883\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/polls/f4262e20-07ee-49eb-af8d-4d8dc3638a93/votes",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"polls",
+								"f4262e20-07ee-49eb-af8d-4d8dc3638a93",
+								"votes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gell all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/poll?page=1&limit=10",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"poll"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/poll/f4262e20-07ee-49eb-af8d-4d8dc3638a93",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"poll",
+								"f4262e20-07ee-49eb-af8d-4d8dc3638a93"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
