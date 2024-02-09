@@ -1,0 +1,4 @@
+- install libs: npm install or yarn 
+- migration run: npx prisma migrate dev
+- server run: npm run dev or yarn dev
+- import postaman collection from json file
